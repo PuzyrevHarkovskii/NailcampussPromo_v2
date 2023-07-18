@@ -1,188 +1,323 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>NailcampussPromo v2</title>
-  <link rel="stylesheet" href="./style.css">
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:900');
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div class="container">
-<div class="header__container">
-  
-  
-<div class="img-user">
-<svg width="22px" height="27px" viewBox="0 0 22 27">
-<g stroke="none" stroke-width="1">
-<g>
-<path d="M15 14.7c1.6-1.3 2.6-3.5 2.6-7.4 0-4-3.3-7.3-7.3-7.3S3 3.2 3 7.3c0 4 1 6.3 2.7 7.6C2.3 17-1 21 .2 23 2.7 27.7 19 28 21 23.2c.8-2.3-2.5-6.2-6-8.5"></path>
-</g>
-</g>
-</svg>
-</div>
-  
-  
-<div class="img-tinder">
-  <a href="https://www.instagram.com/nailcampuss/">
-    <img src="https://w7.pngwing.com/pngs/698/493/png-transparent-tinder-hd-logo-thumbnail.png" width="auto" height="27px" alt="Tinder Logo">
-  </a>
-</div>
-
-
-  
-  <div class="img-chat">
-    <svg width="34px" height="29px" viewBox="0 0 34 29">
-      <g stroke="none" stroke-width="1">
-        <g>
-          <path d="M16.3 20.2c0-4.6 4.4-8.5 10-8.5 1.3 0 2.6.3 3.8.7 0-6.6-6.7-12-14.8-12C7 .4.2 6 .2 12.7.2 17 3 21 7.2 23v4.5c0 .5.4.8 1 .5l6-3h1.5c.7 0 1.4 0 2-.2-1-1.4-1.4-3-1.4-4.6zm10-6c-4.2 0-7.6 2.6-7.6 6s3.4 6.2 7.5 6.2h.5l1 .4 1.6 1c.5 0 1 0 1-.6v-1.8c2-1 3.4-3 3.4-5.2 0-3.4-3.3-6-7.5-6z"></path>
-        </g>
-      </g>
-    </svg>
-  </div>
+:root {
+--primary-color: #FF0050;
+--secondary-color: rgb(246, 244, 250);
+--background: linear-gradient(white, rgb(246, 244, 250));
+}
 
 
 
 
+
+html {
+width: 100%;
+height: 100%;
+min-width: 100%;
+margin: 0;
+padding: 0;
+background:radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   
-</div>
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Open Sans', sans-serif;
+color: var(--primary-color);
+user-select: none;
+}
+
+#wrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+width: 100%;
+height: 100%;
+overflow: hidden;
+top: 0;
+left: 0;
+}
+
+#container {
+display: flex;
+width: 340px;
+height: 480px;
+overflow: hidden;
+}
+
+.background {
+position: absolute;
+width: 350px;
+height: 500px;
+}
+
+#select{
+  width: auto;
+height: 200px;
+}
+
+
+.background svg {
+fill: lighten(var(--primary-color), 40%);
+stroke: var(--primary-color);
+stroke-width: 2px;
+}
+
+.label {
+width: 100%;
+text-align: center;
+position: absolute;
+bottom: 20%;
+color: rgb(218, 223, 229);
+}
+
+.box {
+position: absolute;
+width: 340px;
+height: 450px;
   
-<div class="content__container"></div>
-  
-<div class="footer__container"></div>
-</div>
+}
+
+.boxcontent {
+position: absolute;
+width: 90%;
+height: 90%;
+margin: 5%;
+background-color: var(--secondary-color);
+border-radius: 1.5em;
+overflow: hidden;
+box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.5);
+cursor: grab;
+overflow : hidden;
+}
+.box:last-of-type .boxcontent {
+width: 100%;
+height: 100%;
+margin: 0%;
+}
+
+.box img {
+width: 100%;
+height: 100%;
+}
+.like, .nope {
+position: absolute;
+top: 35px;
+border: 4px solid gray;
+padding: 7px;
+border-radius: 5px;
+text-transform: uppercase;
+font-size: 2.5em;
+font-weight: bold;
+font-family: 'Roboto', sans-serif;
+opacity: 0;
+}
+.like {
+left: 30px;
+border-color: green;
+color: green;
+transform: rotate(-20deg);
+}
+.nope{
+right: 30px;
+border-color: red;
+color: red;
+transform: rotate(20deg);
+}
+.info {
+color: #fff;
+position: absolute;
+bottom: 0px;
+left: 0px;
+padding: 30px 20px 20px 20px;
+width: 100%;
+box-sizing: border-box;
+text-shadow: 2px 2px 5px gray;
+background: linear-gradient(rgba(40,40,40,0), rgba(40,40,40,0.6));
+}
+.name {
+font-size: 1.4em;
+font-weight: bold;
+}
 
 
 
-<div id="wrapper">
-<div id="container">
 
-<div class="background">
 
-  <!-- Элемент где был кружок  -->
 
-  
-  
-<!--  Элемент  -->
-  
-  
-</svg>
-  
-  
-  
-<div class="btns">
-<a class="button" href="#popup"> <img class="button" src="https://i.ibb.co/mygmVBs/tegewrthterh.png" style="width: auto; height: 45px; padding: -20%;">
-  </a></a>
-  <div id="popup" class="overlay">
-    
-  <div class="popup">
-    <h2>Привет!</h2>
-    <div class="content">
-      <p>Я - мастер маникюра с безграничной страстью к красоте и уходу за ногтями. Специализируюсь на создании неповторимых дизайнов, которые подчеркнут вашу индивидуальность и добавят шарма ваших рук. Мои нежные прикосновения и профессиональные навыки помогут вам получить идеальный маникюр и отдохнуть, наслаждаясь уходом, который заслуживаете. Доверьте свои ногти мне, и я создам истинные произведения искусства для вашего неповторимого образа!</p>
-    </div>
-    <a class="close" href="#">&times;</a>
-  </div>
-</div>
-
-    <img src="https://johnnydan.oss-cn-beijing.aliyuncs.com/vue-tinder/nope.png">
-  <img src="https://johnnydan.oss-cn-beijing.aliyuncs.com/vue-tinder/like.png">
- <a class="button" href="#popup1">
-    <img class="button" src="https://i.ibb.co/rQ5kLnC/drtfyyguigfchgvjk.png" style="width: auto; height: 45px;">
-  </a>
-  
-  <div id="popup1" class="overlay">
-    <div class="popup">
-      <h2>Price list</h2>
-      <div class="content">
-        <p>Классический маникюр: от 500 руб. <br>
-Маникюр с гель-лаком: от 800 руб. <br>
-Дизайн ногтей (один ноготь): от 200 руб. <br>
-Наращивание ногтей гелем: от 1500 руб. <br>
-Укрепление ногтей биогелем: от 1000 руб.</p>
-      </div>
-      <a class="close" href="#">&times;</a>
-    </div>
-  </div>
-</div>
-
-  
-
+.container {
+width: 350px;
+height: 590px;
  
-<div class="label">Made by @app1e.jews</div>
+border-radius: 1.5em;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+background-color: #f7f7f7;
+box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+box-shadow: inset 1px 1px 0.12px rgba(255, 255, 255, 0.4),
+    1px 1px 3px rgba(0, 0, 0, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.18);
+  
+}
 
-  
-</div>
-<div class="box">
-<div class="boxcontent">
-<img src="https://www.3dwiggle.com/wp-content/uploads/2016/06/hiroshi-yoshinaga-wired-lathyrus-blog-3dwiggle-1.gif" alt="Profile picture">
-<div class="like">Like</div>
-<div class="nope">Nope</div>
-<div class="info">
-<div class="name">Виктория, 20</div>
- <div class="interest">1 Common Interest</div>
-</div>
-</div>
-</div>
-<div class="box">
-<div class="boxcontent">
-<img src="https://img.gifmagazine.net/gifmagazine/images/31594/original.gif" alt="Profile picture">
-<div class="like">Like</div>
-<div class="nope">Nope</div>
-<div class="info">
-<div class="name">Жирова, 28</div>
-<div class="interest">1 Common Interest</div>
-</div>
-</div>
-</div>
-<div class="box">
-<div class="boxcontent">
-<img src="https://farm3.staticflickr.com/2809/9652339370_16563de76d_o.gif">
-<div class="like">Like</div>
-<div class="nope">Nope</div>
-<div class="info">
-<div class="name">Алина, 32</div>
-<div class="friends">2 Mutual Friend</div>
-  
-</div>
-</div>
-</div>
-<div class="box">
-<div class="boxcontent">
-<img src="https://31.media.tumblr.com/b7bceb002b11332f40c91c2154d8a94b/tumblr_msh93w2Nw81rlovgmo1_400.gif" alt="Profile picture">
-<div class="like">Like</div>
-<div class="nope">Nope</div>
-<div class="info">
-<div class="name">Клещук, 26</div>
-<div class="friends">1 Mutual Friend</div>
-<div class="interest">3 Common Interests</div>
-</div>
-</div>
-</div>
-<div class="box">
-<div class="boxcontent">
-<img src="https://img.gifmagazine.net/gifmagazine/images/41441/original.gif" alt="Profile picture">
-<div class="like">Like</div>
-<div class="nope">Nope</div>
-<div class="info">
-<div class="name">Наращивание, 500</div>
-<div class="friends">2 Mutual Friends</div>
-<div class="interest">10 Common Interests</div>
-  
-</div>
-  
-</div>
-  
-</div>
+.container .header__container {
+display: flex;
+align-items: center;
+padding: 16px;
+justify-content: space-between;
+}
 
-</div>
-    
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/rxjs/2.3.22/rx.all.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jQuery-QueryBuilder/2.7.0/js/query-builder.min.js'></script>
-<script src='https://hammerjs.github.io/dist/hammer.min.js'></script><script  src="./script.js"></script>
+.container .header__container .img-user svg {
+height: 24px;
+fill: #c2c6cd;
+}
 
-</body>
-</html>
+.container .header__container .img-tinder svg {
+height: 24px;
+transform: scale(1.2);
+
+}
+
+.container .header__container .img-chat svg {
+height: 24px;
+fill: #c2c6cd;
+}
+
+
+
+.btns {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 2.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  max-width: 355px;
+}
+.btns img{ width: 80px; }
+
+.svg-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* Прозрачность при открытии модального окна */
+  background: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 400ms;
+  z-index: 9999;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: inset 1px 1px 0.12px rgba(255, 255, 255, 0.4),
+    1px 1px 3px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0.9;
+  border: 1px solid #666;
+  width: 300px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+.overlay.light {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #ffff;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10%;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #666;
+}
+
+.popup .content {
+  max-height: 400px;
+  overflow: auto;
+}
+
+.popup p {
+  margin: 0 0 1em;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.box {
+  margin-bottom: 60px; /* Increase the margin to make space for the modal */
+}
+
+/* Свайп через кнопки */
+
+.animate-like {
+  animation: swipe-like 1s forwards;
+}
+
+.animate-nope {
+  animation: swipe-nope 1s forwards;
+}
+
+@keyframes swipe-like {
+  0% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes swipe-nope {
+  0% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+
+
