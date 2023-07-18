@@ -286,3 +286,38 @@ fill: #c2c6cd;
 .box {
   margin-bottom: 60px; /* Increase the margin to make space for the modal */
 }
+
+/* Свайп через кнопки */
+
+.animate-like {
+  animation: swipe-like 1s forwards;
+}
+
+.animate-nope {
+  animation: swipe-nope 1s forwards;
+}
+
+@keyframes swipe-like {
+  0% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes swipe-nope {
+  0% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+
+
