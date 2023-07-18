@@ -117,3 +117,24 @@ function cancel() {
     opacity: 0
   });
 }
+
+
+
+// Функция свайпа с помощью кнопок
+
+function like() {
+  $('.box:last .boxcontent').addClass('animate-like');
+  setTimeout(() => { 
+    $('.box').last().remove();
+  }, 300);
+}
+
+function nope() {
+  $('.box:last .boxcontent').addClass('animate-nope');
+  setTimeout(() => { 
+    $('.box').last().remove();
+  }, 300);
+}
+
+$('#like-button').on('click', like);
+$('#nope-button').on('click', nope);
