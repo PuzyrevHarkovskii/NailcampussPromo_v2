@@ -196,6 +196,12 @@ fill: #c2c6cd;
   justify-content: center;
   min-width: 300px;
   max-width: 355px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .btns img{ width: 80px; }
 
@@ -427,3 +433,4 @@ fill: #c2c6cd;
       fill: #ffffff;
    padding: 0% 1%;
 }
+
